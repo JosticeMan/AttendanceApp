@@ -56,7 +56,7 @@ public class Student implements Attendee {
 		}
 		if(isPresent)
 		{
-			output += "Present";
+			output += "Present" + "\n";
 		}
 		else
 		{
