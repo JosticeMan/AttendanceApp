@@ -44,7 +44,23 @@ public class Student implements Attendee {
 	
 	public String getReportString()
 	{
-		String output = "";
+		String output = lastName;
+		while(output.length() < 20)
+		{
+			output += " ";
+		}
+		output += firstName;
+		while(output.length() < 40)
+		{
+			if(isPresent)
+			{
+				output += "Present";
+			}
+			else
+			{
+				output += "Absent";
+			}
+		}
 		return output;
 	}
 	
