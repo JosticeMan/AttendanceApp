@@ -52,14 +52,15 @@ public class Student implements Attendee {
 		output += firstName;
 		while(output.length() < 40)
 		{
-			if(isPresent)
-			{
-				output += "Present";
-			}
-			else
-			{
-				output += "Absent";
-			}
+			output += " ";
+		}
+		if(isPresent)
+		{
+			output += "Present";
+		}
+		else
+		{
+			output += "Absent";
 		}
 		return output;
 	}
