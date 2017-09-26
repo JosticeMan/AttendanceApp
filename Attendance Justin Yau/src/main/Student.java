@@ -60,7 +60,7 @@ public class Student implements Attendee {
 		}
 		else
 		{
-			output += "Absent";
+			output += "Absent" + "\n";
 		}
 		return output;
 	}
