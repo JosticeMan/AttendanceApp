@@ -46,15 +46,9 @@ public class Student implements Attendee {
 	public String getReportString()
 	{
 		String output = lastName;
-		while(output.length() < 20)
-		{
-			output += " ";
-		}
+		output = restrictLength(output, 20);
 		output += firstName;
-		while(output.length() < 40)
-		{
-			output += " ";
-		}
+		output = restrictLength(output, 40);
 		if(isPresent)
 		{
 			output += "Present" + "\n";
@@ -62,6 +56,23 @@ public class Student implements Attendee {
 		else
 		{
 			output += "Absent" + "\n";
+		}
+		return output;
+	}
+	
+	public String restrictLength(String s, int index)
+	{
+		String output = s;
+		if(output.length() > index)
+		{
+			output = output.substring(0, index - 3) + "...";
+		}
+		else
+		{
+			while(output.length() < index)
+			{
+				output += " ";
+			}
 		}
 		return output;
 	}
