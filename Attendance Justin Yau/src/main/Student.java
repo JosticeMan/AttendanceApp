@@ -4,12 +4,13 @@ public class Student implements Attendee {
 	
 	private String firstName;
 	private String lastName;
-	private boolean isPresent = false;
+	private boolean isPresent;
 	
 	public Student(String fn, String ln)
 	{
 		firstName = fn;
 		lastName = ln;
+		isPresent = false;
 	}
 	
 	public boolean isPresent() 
